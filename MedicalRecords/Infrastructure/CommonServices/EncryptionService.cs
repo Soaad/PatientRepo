@@ -9,8 +9,9 @@ public class EncryptionService: IEncryptionService
     private readonly byte[] _key;
     private readonly byte[] _iv;
 
-    public EncryptionService(string key)
+    public EncryptionService(IConfiguration config)
     {
+       string key = config["EncryptionKey"];
         using var sha = SHA256.Create();
         _key = sha.ComputeHash(Encoding.UTF8.GetBytes(key));
         _iv = new byte[16]; // Zero IV (can be improved with a secure IV handling)
