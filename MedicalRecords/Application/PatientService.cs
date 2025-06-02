@@ -9,10 +9,13 @@ public class PatientService: IPatientService
 {
     private readonly IPatientRepository _repository;
     private readonly ILogger <PatientService>_logger;
-    public PatientService(IPatientRepository repository, ILogger <PatientService> logger)
+    private readonly HttpClient _httpClient;
+
+    public PatientService(IPatientRepository repository, ILogger <PatientService> logger, HttpClient httpClient)
     {
         _repository = repository;
         _logger = logger;
+        _httpClient = httpClient;
     }
 
     public async Task<IEnumerable<Patient>> GetAllAsync()
@@ -126,6 +129,23 @@ public class PatientService: IPatientService
             _logger.LogError(ex, $"Error deleting patien with ID {id}.");
             throw new Exception("An error occurred while deleting the patient.");
         }
+    }
+    
+    public async Task<MedicalRecord?> GetMedicalRecord(Guid patientId)
+    {
+        try
+        {
+            var response = await _httpClient.GetAsync($"/medicalrecords/{patientId}");
+            if (!response.IsSuccessStatusCode) return null;
+            return await response.Content.ReadFromJsonAsync<MedicalRecord>();
+
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error occurred while fetching medical record for the  patien with ID {patientId}.");
+            throw new Exception("An error occurred while fetching medical record for the patient.");
+        }
+       
     }
 }
 

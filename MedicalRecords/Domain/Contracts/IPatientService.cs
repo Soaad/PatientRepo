@@ -11,4 +11,5 @@ public interface IPatientService
     Task<Patient> CreateAsync(Patient patient);
     Task<bool> UpdateAsync(Guid id, Patient patient);
     Task<bool> DeleteAsync(Guid id);
+    Task<MedicalRecord?> GetMedicalRecord(Guid patientId);
 }

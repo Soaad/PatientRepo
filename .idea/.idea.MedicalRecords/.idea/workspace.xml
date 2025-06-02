@@ -8,13 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="adding structure and code for first API">
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/DatabaseInitializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/SqliteGuidTypeHandler.cs" afterDir="false" />
+    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="add db intilaizer and fixing some staff">
+      <change afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Models/MedicalRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/Domain/Contracts/IPatientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Contracts/IPatientService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MedicalRecords/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +119,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748816672792</updated>
       <workItem from="1748816673847" duration="4412000" />
-      <workItem from="1748860580525" duration="3462000" />
+      <workItem from="1748860580525" duration="7514000" />
     </task>
     <task id="LOCAL-00001" summary="Adding first API with its all layers-Clean Architecture">
       <option name="closed" value="true" />
@@ -139,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748819057266</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add db intilaizer and fixing some staff">
+      <option name="closed" value="true" />
+      <created>1748866196554</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748866196554</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +157,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Adding first API with its all layers-Clean Architecture" />
     <MESSAGE value="Adding encyrptionKey and jwt key" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding encyrptionKey and jwt key" />
+    <MESSAGE value="add db intilaizer and fixing some staff" />
+    <option name="LAST_COMMIT_MESSAGE" value="add db intilaizer and fixing some staff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

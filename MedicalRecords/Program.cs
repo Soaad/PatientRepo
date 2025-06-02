@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using MedicalRecords.Application;
 using MedicalRecords.Domain.Contracts;
+using MedicalRecords.Domain.Models;
 using MedicalRecords.Infrastructure;
 using MedicalRecords.Infrastructure.CommonServices;
 using MedicalRecords.Infrastructure.Repositories;
@@ -29,6 +30,7 @@ builder.Services.AddCors(options =>
 //register DB connetion
 
 builder.Services.AddSingleton<IDbConnection>(_ => new SqliteConnection("Data Source=patiens.db"));
+SqlMapper.AddTypeHandler(new SqliteGuidTypeHandler());
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -67,9 +69,17 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddControllers();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IEncryptionService, EncryptionService>();
-builder.Services.AddScoped<IPatientService, PatientService>();
+//builder.Services.AddScoped<IPatientService, PatientService>();
 
-SqlMapper.AddTypeHandler(new SqliteGuidTypeHandler());
+builder.Services.AddHttpClient<IPatientService, PatientService>(client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5050");
+});
+
+builder.Services.AddHttpClient("MiniAPI", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5050"); // MiniAPI base URL
+});
 
 // JWT Authentication
 /*builder.Services.AddAuthentication("Bearer")
@@ -87,6 +97,8 @@ SqlMapper.AddTypeHandler(new SqliteGuidTypeHandler());
     });
 
 //builder.Services.AddAuthorization();*/
+
+
 
 
 
@@ -108,6 +120,26 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+var records = new List<MedicalRecord>();
+
+
+app.MapGet("/medicalrecords/{patientId}", (Guid patientId) =>
+{
+    var result = records.FirstOrDefault(r => r.PatientId == patientId);
+    return result is null ? Results.NotFound() : Results.Ok(result);
+});
+
+app.MapPost("/medicalrecords", (MedicalRecord record) =>
+{
+    var existing = records.FirstOrDefault(r => r.PatientId == record.PatientId);
+    if (existing is not null) records.Remove(existing);
+    record.LastUpdated = DateTime.UtcNow;
+    records.Add(record);
+    return Results.Ok(record);
+});
+
+
 app.UseStaticFiles();
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
