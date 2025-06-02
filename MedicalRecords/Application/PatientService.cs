@@ -70,7 +70,7 @@ public class PatientService: IPatientService
        
         try
         {
-            patient.Id = Guid.NewGuid();
+            //patient.Id = Guid.NewGuid();
             await _repository.AddAsync(patient);
             return patient;
         }

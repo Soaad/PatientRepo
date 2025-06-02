@@ -22,7 +22,7 @@ public class PatientsController: ControllerBase
         _service = service;
         _logger = logger;
     }
-    [Authorize]
+    //[Authorize]
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
@@ -39,7 +39,7 @@ public class PatientsController: ControllerBase
 
         
     }
-    [Authorize]
+   // [Authorize]
     [HttpGet("paged")]
     public async Task<IActionResult> GetPaged([FromQuery] int page = 1, [FromQuery] int size = 10)
     {
@@ -47,7 +47,7 @@ public class PatientsController: ControllerBase
         var (data, total) = await _service.GetPagedAsync(page, size);
         return Ok(new { total, data });
     }
-    [Authorize]
+    //[Authorize]
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(Guid id)
     {
@@ -69,7 +69,7 @@ public class PatientsController: ControllerBase
        
     }
 
-    [Authorize]
+    //[Authorize]
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] Patient patient)
     {
@@ -91,7 +91,7 @@ public class PatientsController: ControllerBase
         }
     }
 
- [Authorize]
+ //[Authorize]
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(Guid id, [FromBody] Patient patient)
     {
@@ -119,7 +119,7 @@ public class PatientsController: ControllerBase
         }
         
     }
-    [Authorize]
+    //[Authorize]
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {

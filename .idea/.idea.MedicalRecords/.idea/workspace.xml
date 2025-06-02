@@ -4,45 +4,62 @@
     <projectFile profileName="http">MedicalRecords/MedicalRecords.csproj</projectFile>
     <projectFile profileName="https">MedicalRecords/MedicalRecords.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Contracts/IEncryptionService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Contracts/IPatientRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Contracts/IPatientService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Models/Patient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/CommonServices/EncryptionService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/MedicalRecords.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Middlewares/Custom_Exceptions/NotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Middlewares/ExceptionHandlingMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
+    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="adding structure and code for first API">
+      <change afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/DatabaseInitializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/SqliteGuidTypeHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Soaad&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Soaad/PatientRepo.git&quot;,
+    &quot;accountId&quot;: &quot;df7a2329-f731-49eb-983e-db203b0dbe8f&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MedicalRecords/Infrastructure/CommonServices/EncryptionService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MedicalRecords/Middlewares/Custom_Exceptions/NotFoundException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MedicalRecords/Middlewares/ExceptionHandlingMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/13975998ba6e8b389a8538b45baafa2f30f5bdf2/RegexGenerator.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ce9d8efb1faa39f4b369864d2bef8f575a85595cd985e337c2b82690f6/CommandDefinition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/48b1a17527601b96142a2b53118717d830b7548729b9f4322894b75a4323/SerilogLogger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b9e66a07e74680d5465a97a14df3e9882fdb84662353536dc349d60bea31d/LevelConvert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9ee1ca4d35229249c14f3d41932d957811a16b1f10163023c8d5befcf7b11/CompiledRegex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce655bef40f2714de52e0d1305360a78f2bd2a9ecc7acff810129b1523c089/CachingMessageTemplateParser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8f874c5d3a6a1ab8684279872d431a2cbf7f4c1b94fb4f82b57ebeeab6/SqlMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MedicalRecords/Infrastructure/CommonServices/EncryptionService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MedicalRecords/Middlewares/Custom_Exceptions/NotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MedicalRecords/Middlewares/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2xvRgYas4ntTF2ik9tx8Co22hpr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -54,7 +71,7 @@
     ".NET Launch Settings Profile.MedicalRecords: http.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "<unknown>",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,15 +120,82 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1748816672792</updated>
-      <workItem from="1748816673847" duration="321000" />
+      <workItem from="1748816673847" duration="4412000" />
+      <workItem from="1748860580525" duration="3462000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding first API with its all layers-Clean Architecture">
+      <option name="closed" value="true" />
+      <created>1748817910042</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748817910042</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding encyrptionKey and jwt key">
+      <option name="closed" value="true" />
+      <created>1748819057266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748819057266</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Adding first API with its all layers-Clean Architecture" />
+    <MESSAGE value="Adding encyrptionKey and jwt key" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding encyrptionKey and jwt key" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" containingFunctionPresentation="Method 'GetAllAsync'">
+            <startOffsets>
+              <option value="871" />
+            </startOffsets>
+            <endOffsets>
+              <option value="872" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs</url>
+          <line>55</line>
+          <properties documentPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" containingFunctionPresentation="Method 'GetByIdAsync'">
+            <startOffsets>
+              <option value="1760" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1812" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs</url>
+          <line>116</line>
+          <properties documentPath="$PROJECT_DIR$/MedicalRecords/Infrastructure/Repositories/PatientRepository.cs" containingFunctionPresentation="Method 'AddAsync'">
+            <startOffsets>
+              <option value="3885" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3950" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -19,6 +19,7 @@ public class PatientRepository : IPatientRepository
         _dbConnection = dbConnection;
         _logger = logger;
         _encryption = encryption;
+        DatabaseInitializer.Initialize(_dbConnection);
     }
 
     public async Task<IEnumerable<Patient>> GetAllAsync()
