@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using Microsoft.Extensions.Logging;
 using MedicalRecords.Domain.Contracts;
 using MedicalRecords.Domain.Models;
@@ -10,12 +11,14 @@ public class PatientService: IPatientService
     private readonly IPatientRepository _repository;
     private readonly ILogger <PatientService>_logger;
     private readonly HttpClient _httpClient;
+    private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public PatientService(IPatientRepository repository, ILogger <PatientService> logger, HttpClient httpClient)
+    public PatientService(IPatientRepository repository, ILogger <PatientService> logger, HttpClient httpClient, IHttpContextAccessor httpContextAccessor)
     {
         _repository = repository;
         _logger = logger;
         _httpClient = httpClient;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<IEnumerable<Patient>> GetAllAsync()
@@ -135,6 +138,10 @@ public class PatientService: IPatientService
     {
         try
         {
+            // Forward user's token to MiniAPI
+            var token = _httpContextAccessor.HttpContext?.Request.Headers["Authorization"].ToString();
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token?.Split(" ").Last());
+
             var response = await _httpClient.GetAsync($"/medicalrecords/{patientId}");
             if (!response.IsSuccessStatusCode) return null;
             return await response.Content.ReadFromJsonAsync<MedicalRecord>();

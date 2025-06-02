@@ -36,6 +36,7 @@ SqlMapper.AddTypeHandler(new SqliteGuidTypeHandler());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
+//to add authorize inside swagger
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "Your API", Version = "v1" });
@@ -51,25 +52,13 @@ builder.Services.AddSwaggerGen(c =>
         Description = "Enter your JWT token in this format: Bearer {your token here}"
     });
 
-    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
-    {
-        {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
-            {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
-                {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
-    });
+    
 });
 builder.Services.AddControllers();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IEncryptionService, EncryptionService>();
 //builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddHttpClient<IPatientService, PatientService>(client =>
 {
@@ -82,21 +71,23 @@ builder.Services.AddHttpClient("MiniAPI", client =>
 });
 
 // JWT Authentication
-/*builder.Services.AddAuthentication("Bearer")
-    .AddJwtBearer("Bearer", options =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
+        var config = builder.Configuration;
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuer = false,
-            ValidateAudience = false,
+            ValidateIssuer = true,
+            ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]?? throw new InvalidOperationException("JWT Key is missing"))),
+            ValidIssuer = config["Jwt:Issuer"],
+            ValidAudience = config["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]))
         };
     });
 
-//builder.Services.AddAuthorization();*/
+builder.Services.AddAuthorization();
 
 
 
@@ -143,8 +134,10 @@ app.MapPost("/medicalrecords", (MedicalRecord record) =>
 app.UseStaticFiles();
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();
-//app.UseAuthentication();
-//app.UseAuthorization();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.MapControllers();
 app.Run();
