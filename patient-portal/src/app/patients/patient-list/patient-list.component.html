@@ -1,5 +1,7 @@
-<ul *ngIf="patients">
-  <li *ngFor="let p of patients">
-    {{ p.fullName }} - {{ p.dateOfBirth }}
-  </li>
-</ul>
+<div *ngIf="patients">
+  <ul>
+    <li *ngFor="let p of patients">
+      {{ p.fullName }} - {{ p.dateOfBirth }}
+    </li>
+  </ul>
+</div>

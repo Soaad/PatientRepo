@@ -8,12 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="FE Files">
+    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="updates in FE to up">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/auth/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/core/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/core/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/models/patient.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/models/patient.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patient-list/patient-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patient-list/patient-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patient.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patients-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patients-routing.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +41,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,6 +88,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/soaadabdelaziz/RiderProjects/MedicalRecords/patient-portal/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -128,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748816672792</updated>
       <workItem from="1748816673847" duration="4412000" />
-      <workItem from="1748860580525" duration="23161000" />
+      <workItem from="1748860580525" duration="24867000" />
     </task>
     <task id="LOCAL-00001" summary="Adding first API with its all layers-Clean Architecture">
       <option name="closed" value="true" />
@@ -194,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748952982706</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updates in FE to up">
+      <option name="closed" value="true" />
+      <created>1748963631802</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748963631802</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +225,8 @@
     <MESSAGE value="comment authorize on patient controller as it has a bug" />
     <MESSAGE value="Adding Patient Portal" />
     <MESSAGE value="FE Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="FE Files" />
+    <MESSAGE value="updates in FE to up" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates in FE to up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,13 +285,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs</url>
-          <line>30</line>
+          <line>29</line>
           <properties documentPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" containingFunctionPresentation="Method 'GetAll'">
             <startOffsets>
-              <option value="762" />
+              <option value="755" />
             </startOffsets>
             <endOffsets>
-              <option value="806" />
+              <option value="799" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

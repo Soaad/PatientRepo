@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MedicalRecords.API.Controllers;
 
-//[Authorize]
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class PatientsController: ControllerBase
@@ -22,7 +22,6 @@ public class PatientsController: ControllerBase
         _service = service;
         _logger = logger;
     }
-    
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {

@@ -20,6 +20,7 @@ export class PatientService {
   }
 
   getAllPatients(): Observable<Patient[]> {
+    debugger;
     return this.http.get<Patient[]>(this.baseUrl, { headers: this.getAuthHeaders() });
   }
 

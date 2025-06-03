@@ -5,7 +5,8 @@ import { PatientListComponent } from './patients/patient-list/patient-list.compo
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'patients', component: PatientListComponent },
+  { path: 'patients', loadChildren: () => import('./patients/patients.module').then(m => m.PatientsModule) },
+  //{ path: 'patients', component: PatientListComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
