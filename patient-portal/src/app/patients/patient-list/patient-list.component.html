@@ -1,0 +1,5 @@
+<ul *ngIf="patients">
+  <li *ngFor="let p of patients">
+    {{ p.fullName }} - {{ p.dateOfBirth }}
+  </li>
+</ul>
