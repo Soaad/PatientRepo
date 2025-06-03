@@ -1,0 +1,21 @@
+<h2>Medical Records</h2>
+
+<ul *ngIf="records.length > 0; else noRecords">
+  <li *ngFor="let record of records">
+    <strong>Last Updated:</strong> {{ record.lastUpdated | date:'shortDate' }}<br>
+    <strong>Diagnosis:</strong> {{ record.diagnosis }}<br>
+    <strong>Notes:</strong> {{ record.notes }}
+    <hr>
+  </li>
+</ul>
+<ng-template #noRecords>
+  <p>No medical records found for this patient.</p>
+</ng-template>
+
+<h3>Add Medical Record</h3>
+<form (ngSubmit)="addRecord()" #recordForm="ngForm">
+  <input type="text" [(ngModel)]="newRecord.diagnosis" name="diagnosis" placeholder="Diagnosis" required>
+  <input type="text" [(ngModel)]="newRecord.notes" name="notes" placeholder="Notes" required>
+  <input type="date" [(ngModel)]="newRecord.lastUpdated" name="lastUpdated" required>
+  <button type="submit" [disabled]="recordForm.invalid">Add Record</button>
+</form>
