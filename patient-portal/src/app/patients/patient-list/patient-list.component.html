@@ -1,7 +1,38 @@
-<div *ngIf="patients">
-  <ul>
-    <li *ngFor="let p of patients">
+
+<h2>Patients</h2>
+
+
+<form (ngSubmit)="addPatient()" #addForm="ngForm">
+  <input type="text" [(ngModel)]="newPatient.fullName" name="fullName" placeholder="Full Name" required>
+  <input type="date" [(ngModel)]="newPatient.dateOfBirth" name="dateOfBirth" required>
+  <input type="email" [(ngModel)]="newPatient.encryptedEmail" name="encryptedEmail" placeholder="Email" required>
+  <input type="text" [(ngModel)]="newPatient.encryptedPhone" name="encryptedPhone" placeholder="Phone" required>
+  <input type="text" [(ngModel)]="newPatient.address" name="address" placeholder="Address" required>
+  <button type="submit" [disabled]="addForm.invalid">Add Patient</button>
+</form>
+
+<ul *ngIf="patients">
+  <li *ngFor="let p of patients">
+    <div *ngIf="editPatient?.id !== p.id">
       {{ p.fullName }} - {{ p.dateOfBirth }}
-    </li>
-  </ul>
+      <button (click)="startEdit(p)">Edit</button>
+      <button (click)="deletePatient(p.id)">Delete</button>
+    </div>
+  <div *ngIf="editPatient && editPatient.id === p.id">
+  <input
+    type="text"
+    [(ngModel)]="editPatient.fullName"
+    [name]="'editFullName' + p.id"
+    required
+  >
+  <input
+    type="date"
+    [(ngModel)]="editPatient.dateOfBirth"
+    [name]="'editDateOfBirth' + p.id"
+    required
+  >
+  <button (click)="updatePatient()">Save</button>
+  <button (click)="cancelEdit()">Cancel</button>
 </div>
+  </li>
+</ul>

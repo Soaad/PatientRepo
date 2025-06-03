@@ -8,14 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="updates in FE to up">
+    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="add authentication and return for patients">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patient-list/patient-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patient-list/patient-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patient-list/patient-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patient-list/patient-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patient.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patient.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patients-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patients-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/patients/patients.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/patients/patients.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748816672792</updated>
       <workItem from="1748816673847" duration="4412000" />
-      <workItem from="1748860580525" duration="24867000" />
+      <workItem from="1748860580525" duration="27646000" />
     </task>
     <task id="LOCAL-00001" summary="Adding first API with its all layers-Clean Architecture">
       <option name="closed" value="true" />
@@ -207,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748963631802</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add authentication and return for patients">
+      <option name="closed" value="true" />
+      <created>1748966857063</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748966857063</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +233,8 @@
     <MESSAGE value="Adding Patient Portal" />
     <MESSAGE value="FE Files" />
     <MESSAGE value="updates in FE to up" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates in FE to up" />
+    <MESSAGE value="add authentication and return for patients" />
+    <option name="LAST_COMMIT_MESSAGE" value="add authentication and return for patients" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,6 +316,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs</url>
+          <line>78</line>
+          <properties documentPath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" containingFunctionPresentation="Method 'CreateAsync'">
+            <startOffsets>
+              <option value="2392" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2420" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

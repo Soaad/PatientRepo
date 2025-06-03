@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PatientsRoutingModule } from './patients-routing.module';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { PatientDetailComponent } from './patient-detail/patient-detail.componen
   ],
   imports: [
     CommonModule,
+    FormsModule, 
     PatientsRoutingModule
   ]
 })

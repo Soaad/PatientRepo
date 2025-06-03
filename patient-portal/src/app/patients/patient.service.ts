@@ -35,4 +35,11 @@ export class PatientService {
   createPatient(patient: Patient): Observable<any> {
     return this.http.post(this.baseUrl, patient, { headers: this.getAuthHeaders() });
   }
+  updatePatient(id: string, patient: Patient): Observable<any> {
+  return this.http.put(`${this.baseUrl}/${id}`, patient, { headers: this.getAuthHeaders() });
+}
+
+deletePatient(id: string): Observable<any> {
+  return this.http.delete(`${this.baseUrl}/${id}`, { headers: this.getAuthHeaders() });
+}
 }
