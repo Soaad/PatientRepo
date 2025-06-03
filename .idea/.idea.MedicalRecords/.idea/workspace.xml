@@ -8,15 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="Addin medical record">
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MedicalRecords/Domain/Models/UserLogin.cs" afterDir="false" />
+    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="comment authorize on patient controller as it has a bug">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Application/PatientService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MedicalRecords/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MedicalRecords/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +47,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce655bef40f2714de52e0d1305360a78f2bd2a9ecc7acff810129b1523c089/CachingMessageTemplateParser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e8f874c5d3a6a1ab8684279872d431a2cbf7f4c1b94fb4f82b57ebeeab6/SqlMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/soaadabdelaziz/RiderProjects/MedicalRecords/MedicalRecords/API/Controllers/PatientsController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/soaadabdelaziz/RiderProjects/MedicalRecords/MedicalRecords/Application/PatientService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/soaadabdelaziz/RiderProjects/MedicalRecords/MedicalRecords/Domain/Contracts/IPatientService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MedicalRecords/Infrastructure/CommonServices/EncryptionService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,6 +55,8 @@
     <setting file="file://$PROJECT_DIR$/MedicalRecords/Middlewares/Custom_Exceptions/NotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MedicalRecords/Middlewares/ExceptionHandlingMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/soaadabdelaziz/RiderProjects/MedicalRecords/MedicalRecords/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/soaadabdelaziz/RiderProjects/MedicalRecords/MedicalRecords/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/soaadabdelaziz/RiderProjects/MedicalRecords/MedicalRecords/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -75,6 +71,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.MedicalRecords: http.executor": "Run",
+    "Attach to Process.1279:dotnet.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -127,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748816672792</updated>
       <workItem from="1748816673847" duration="4412000" />
-      <workItem from="1748860580525" duration="11204000" />
+      <workItem from="1748860580525" duration="20742000" />
     </task>
     <task id="LOCAL-00001" summary="Adding first API with its all layers-Clean Architecture">
       <option name="closed" value="true" />
@@ -161,7 +158,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748878442190</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding JWT">
+      <option name="closed" value="true" />
+      <created>1748893035122</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748893035122</updated>
+    </task>
+    <task id="LOCAL-00006" summary="comment authorize on patient controller as it has a bug">
+      <option name="closed" value="true" />
+      <created>1748899521188</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748899521188</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +188,9 @@
     <MESSAGE value="Adding encyrptionKey and jwt key" />
     <MESSAGE value="add db intilaizer and fixing some staff" />
     <MESSAGE value="Addin medical record" />
-    <option name="LAST_COMMIT_MESSAGE" value="Addin medical record" />
+    <MESSAGE value="adding JWT" />
+    <MESSAGE value="comment authorize on patient controller as it has a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment authorize on patient controller as it has a bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,13 +252,26 @@
           <line>30</line>
           <properties documentPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/PatientsController.cs" containingFunctionPresentation="Method 'GetAll'">
             <startOffsets>
-              <option value="760" />
+              <option value="762" />
             </startOffsets>
             <endOffsets>
-              <option value="804" />
+              <option value="806" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/MedicalRecords/API/Controllers/AuthController.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/MedicalRecords/API/Controllers/AuthController.cs" containingFunctionPresentation="Method 'GenerateToken'">
+            <startOffsets>
+              <option value="845" />
+            </startOffsets>
+            <endOffsets>
+              <option value="924" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
