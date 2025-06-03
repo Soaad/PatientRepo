@@ -17,6 +17,7 @@
       {{ p.fullName }} - {{ p.dateOfBirth }}
       <button (click)="startEdit(p)">Edit</button>
       <button (click)="deletePatient(p.id)">Delete</button>
+      <button (click)="openMedicalRecord(p.id)">View/Add Medical Record</button>
     </div>
   <div *ngIf="editPatient && editPatient.id === p.id">
   <input

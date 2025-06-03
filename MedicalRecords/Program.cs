@@ -67,7 +67,7 @@ builder.Services.AddHttpClient<IPatientService, PatientService>(client =>
 
 builder.Services.AddHttpClient("MiniAPI", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5050"); // MiniAPI base URL
+    client.BaseAddress = new Uri("http://localhost:5169"); // MiniAPI base URL
 });
 
 // JWT Authentication
@@ -126,15 +126,15 @@ var records = new List<MedicalRecord>();
 
 app.MapGet("/medicalrecords/{patientId}", (Guid patientId) =>
 {
-    var result = records.FirstOrDefault(r => r.PatientId == patientId);
+    var result = records.Where(r => r.PatientId == patientId).ToList();
     return result is null ? Results.NotFound() : Results.Ok(result);
 });
 
 app.MapPost("/medicalrecords", (MedicalRecord record) =>
 {
     var existing = records.FirstOrDefault(r => r.PatientId == record.PatientId);
-    if (existing is not null) records.Remove(existing);
-    record.LastUpdated = DateTime.UtcNow;
+    if (existing is  null) records.Add(record);
+    existing.LastUpdated = DateTime.UtcNow;
     records.Add(record);
     return Results.Ok(record);
 });

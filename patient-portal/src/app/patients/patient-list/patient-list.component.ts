@@ -3,6 +3,7 @@
 import { Component } from '@angular/core';
 import { Patient } from 'src/app/models/patient.model';
 import { PatientService } from '../patient.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient-list',
@@ -14,7 +15,7 @@ export class PatientListComponent {
   newPatient: Patient = { id: "00000000-0000-0000-0000-000000000000", fullName: '', dateOfBirth: '' ,encryptedEmail:'',encryptedPhone:'',address:''}; // Adjust fields as needed
   editPatient: Patient | null = null;
 
-  constructor(private patientService: PatientService) {}
+  constructor(private patientService: PatientService,private router: Router) {}
 
   ngOnInit() {
     this.loadPatients();
@@ -56,6 +57,10 @@ export class PatientListComponent {
     if (confirm('Are you sure you want to delete this patient?')) {
       this.patientService.deletePatient(id).subscribe(() => this.loadPatients());
     }
+  }
+
+   openMedicalRecord(patientId: string) {
+    this.router.navigate(['/medical-records', patientId]);
   }
 }
 

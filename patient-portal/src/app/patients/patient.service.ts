@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Patient, MedicalRecord } from '../models/patient.model';
+import { Patient } from '../models/patient.model';
+import {MedicalRecord}from '../models/medicalrecord.model';
 import { AuthService } from '../core/auth.service';
 
 @Injectable({
@@ -10,7 +11,7 @@ import { AuthService } from '../core/auth.service';
 export class PatientService {
 
   private baseUrl = 'http://localhost:5169/api/Patients';
-  private medicalUrl = 'http://localhost:5050/medicalrecords';
+  private medicalUrl = 'http://localhost:5169/medicalrecords';
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 
