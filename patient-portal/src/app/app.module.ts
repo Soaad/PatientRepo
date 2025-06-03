@@ -6,6 +6,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './core/token.interceptor';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http'; // <-- Add this
 
 @NgModule({
   declarations: [
@@ -13,9 +14,10 @@ import { AuthModule } from './auth/auth.module';
   ],
   imports: [
     BrowserModule,
-   // FormsModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-   // AuthModule
+    AuthModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
   bootstrap: [AppComponent]

@@ -7,10 +7,7 @@ export interface Patient {
   address: string;
 }
 
-export interface UserLogin {
-  username: string;
-  password: string;
-}
+
 
 export interface MedicalRecord {
   patientId: string;

@@ -8,8 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="comment authorize on patient controller as it has a bug">
+    <list default="true" id="fc127a39-3e05-460a-b8b3-cc600144c9e2" name="Changes" comment="FE Files">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MedicalRecords/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/core/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/core/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient-portal/src/app/models/patient.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/patient-portal/src/app/models/patient.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748816672792</updated>
       <workItem from="1748816673847" duration="4412000" />
-      <workItem from="1748860580525" duration="20742000" />
+      <workItem from="1748860580525" duration="23161000" />
     </task>
     <task id="LOCAL-00001" summary="Adding first API with its all layers-Clean Architecture">
       <option name="closed" value="true" />
@@ -174,7 +178,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748899521188</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding Patient Portal">
+      <option name="closed" value="true" />
+      <created>1748952911022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748952911022</updated>
+    </task>
+    <task id="LOCAL-00008" summary="FE Files">
+      <option name="closed" value="true" />
+      <created>1748952982706</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748952982706</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +210,9 @@
     <MESSAGE value="Addin medical record" />
     <MESSAGE value="adding JWT" />
     <MESSAGE value="comment authorize on patient controller as it has a bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment authorize on patient controller as it has a bug" />
+    <MESSAGE value="Adding Patient Portal" />
+    <MESSAGE value="FE Files" />
+    <option name="LAST_COMMIT_MESSAGE" value="FE Files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
